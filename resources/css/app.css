@@ -1,0 +1,576 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+html {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    background-color: #1c1c1c;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: inherit;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 50;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    background: #292929;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.header_body {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    letter-spacing: 3px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.panel {
+    display: none;
+}
+
+.header_tab {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+}
+
+.tab {
+    text-decoration: none;
+    font-size: 20px;
+    color: #4f4f4f;
+}
+
+.tab:nth-child(2) {
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: #4f4f4f;
+    padding: 0px 20px 0px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.tab:nth-child(1) {
+    color: white;
+}
+
+.tab:nth-child(3) {
+    color: white;
+}
+
+.scene {
+    padding: 50px 0px 50px 0px;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid #4f4f4f;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: normal;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.scene_preview {
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    background: #131313;
+}
+
+.scene_title {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        rgb(204, 92, 62) 0%,
+        rgb(218, 135, 47) 20%,
+        rgb(233, 186, 32) 40%,
+        rgb(151, 185, 39) 60%,
+        rgb(95, 145, 171) 80%,
+        rgb(188, 78, 109) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.scene_element {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 250px 0px 250px 0px;
+}
+
+.element {
+    display: flex;
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px 0px 10px;
+    border: 3px solid;
+    border-radius: 50%;
+}
+
+.element_img {
+    color: #b1f6ff;
+    margin: 0px 10px 0px 10px;
+    font-size: 100px;
+}
+
+.K {
+    color: #cc5c3e;
+}
+
+/* .moving_1 {
+    animation: moving_1 75s infinite linear;
+} */
+
+.He {
+    color: #da872f;
+}
+
+/* .moving_2 {
+    animation: moving_2 36s infinite linear;
+} */
+
+.Au {
+    color: #e9ba20;
+}
+
+/* .moving_4 {
+    animation: moving_4 27s infinite linear;
+} */
+
+.U {
+    color: #97b927;
+}
+
+/* .moving_3 {
+    animation: moving_3 29s infinite linear;
+} */
+
+.Cl {
+    color: #5f91ab;
+}
+
+/* .moving_5 {
+    animation: moving_5 38s infinite linear;
+} */
+
+.Na {
+    color: #bc4e6d;
+}
+
+/* .moving_6 {
+    animation: moving_6 60s infinite linear;
+} */
+
+.scene_ingridients {
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+}
+
+.ingridients_menu_title {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 50px;
+    font-weight: normal;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.ingridients {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+.ingridient {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    max-height: 50px;
+}
+
+.ingridient_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    min-width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    border: 3px solid;
+    border-radius: 50%;
+}
+
+.ingridient_check {
+    position: relative;
+    min-width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.ingridient_check::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 36px;
+    background: #131313;
+    border-radius: 20px;
+}
+
+.check {
+    appearance: none;
+}
+
+.check:checked + .switch {
+    left: 26px;
+}
+
+.ingridient_check::before .check:checked {
+    background-color: red;
+}
+
+.switch {
+    position: absolute;
+    left: 3px;
+    width: 30px;
+    height: 100%;
+    background: #131313;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 2px solid #333333;
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.line {
+    width: 10px;
+    height: 2px;
+    background-color: #333333;
+    display: block;
+}
+
+.line:nth-child(2) {
+    margin: 5px 0px 5px 0px;
+    width: 15px;
+}
+
+.ingridient_description {
+    margin: 0px 0px 0px 50px;
+    flex-grow: 1;
+    color: white;
+    font-size: 15px;
+    align-self: flex-end;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #4f4f4f;
+}
+
+.scene_application {
+    width: 100%;
+    background: #131313;
+}
+
+.application_title {
+    padding-bottom: 50px;
+}
+
+.scene_text {
+    color: white;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+.user_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label_box {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.text_box {
+    margin-left: 20px;
+    padding: 5px;
+    background: #4f4f4f;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    caret-color: white;
+    font-weight: bold;
+}
+
+.message_box {
+    width: 230px;
+    height: 100px;
+    margin-left: 20px;
+    padding: 5px;
+    background: #4f4f4f;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    caret-color: white;
+    font-weight: bold;
+}
+
+.button_box {
+    padding: 10px;
+    background: #4f4f4f;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.errors {
+    width: 300px;
+    text-align: start;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #e01616;
+    font-size: 15px;
+    background: #471507;
+    border: 1px solid #4f4f4f;
+    border-left: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.success {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #92e016;
+    font-size: 15px;
+    background: #144707;
+    border: 1px solid #4f4f4f;
+    border-radius: 25px;
+}
+
+.msg {
+    padding-bottom: 5px;
+}
+
+/* @keyframes moving_1 {
+    from {
+        transform: rotate(0deg) translate(-320px) rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg) translate(-320px) rotate(360deg);
+    }
+}
+
+@keyframes moving_2 {
+    from {
+        transform: rotate(0deg) translate(200px) rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg) translate(200px) rotate(360deg);
+    }
+}
+
+@keyframes moving_3 {
+    from {
+        transform: rotate(0deg) translate(-80px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(-80px) rotate(-360deg);
+    }
+}
+
+@keyframes moving_4 {
+    from {
+        transform: rotate(0deg) translate(140px) rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg) translate(140px) rotate(360deg);
+    }
+}
+
+@keyframes moving_5 {
+    from {
+        transform: rotate(0deg) translate(260px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(260px) rotate(-360deg);
+    }
+}
+
+@keyframes moving_6 {
+    from {
+        transform: rotate(0deg) translate(-380px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(-380px) rotate(-360deg);
+    }
+} */
+
+@media (max-width: 1024px) {
+    .ingridient {
+        max-height: max-content;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .ingridient_check {
+        margin-right: 50px;
+    }
+    .ingridient_description {
+        margin: 20px 0px 20px 0px;
+        text-align: start;
+    }
+}
+
+@media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .panel {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .panel::before,
+    .panel::after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.5s;
+    }
+    .panel::before {
+        top: 0;
+    }
+    .panel::after {
+        bottom: 0;
+    }
+    .panel span {
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+    }
+
+    .panel.active::before {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+
+    .panel.active::after {
+        bottom: 9px;
+        transform: rotate(-45deg);
+    }
+
+    .panel.active span {
+        transform: scale(0);
+    }
+
+    .header_tab {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: center;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        overflow: auto;
+        background-color: #383838;
+        z-index: 1;
+        margin: 50px 0px 0px 0px;
+        transition: all 0.5s;
+    }
+
+    .header_tab.active {
+        top: 0;
+    }
+
+    .tab {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+    .tab:nth-child(2) {
+        border: none;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 567px) {
+    .ingridients_menu_title {
+        width: 80%;
+        margin: auto;
+    }
+}
